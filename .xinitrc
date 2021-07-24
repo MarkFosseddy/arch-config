@@ -37,4 +37,4 @@ setxkbmap -option caps:escape
 xset r rate 200 30
 
 nitrogen --restore &
-exec qtile
+exec qtile start
