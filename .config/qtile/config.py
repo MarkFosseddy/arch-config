@@ -121,7 +121,7 @@ screens = [
                 widget.Sep(padding=theme["margin"]),
 
                 widget.TextBox(text="RAM:"),
-                widget.Memory(format="{MemUsed}M"),
+                widget.Memory(format="{MemUsed:.0f}M"),
                 widget.Sep(padding=theme["margin"]),
 
                 widget.TextBox(text="Volume:"),
