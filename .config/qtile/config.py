@@ -59,7 +59,7 @@ keys = [
     Key([], "XF86AudioMute", lazy.spawn("amixer -q set Master toggle")),
     Key([], "XF86AudioLowerVolume", lazy.spawn("amixer sset Master 5- unmute -q")),
     Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer sset Master 5+ unmute -q")),
-    Key([], "XF86AudioMicMute", lazy.spawn("toggle-mic-mute")),
+    Key([], "XF86AudioMicMute", lazy.spawn("amixer set Capture toggle -q")),
 
     # Backlight
     Key([], "XF86MonBrightnessUp", lazy.spawn("backlight-control inc")),
@@ -92,6 +92,7 @@ theme = dict(
 layouts = [
     layout.MonadTall(**theme),
     layout.MonadWide(**theme),
+    layout.Columns(**theme),
     layout.Max(**theme),
 ]
 

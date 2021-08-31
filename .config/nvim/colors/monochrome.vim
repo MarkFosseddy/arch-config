@@ -80,8 +80,9 @@ call s:hi("Folded")
 " --- Line numbers gutter ------------------------------------------------------
 call s:hi("LineNr", s:dgray)
 
-" --- Small arrow used for tabs ------------------------------------------------
-call s:hi("SpecialKey", s:sblue, s:default_bg, s:bold)
+" --- Invisible chars ------------------------------------------------
+call s:hi("NonText", s:cgray, s:default_bg, s:none)
+call s:hi("Whitespace", s:cgray, s:default_bg, s:none)
 
 " --- File browsers ------------------------------------------------------------
 call s:hi("Directory", s:white, s:default_bg, s:bold)
