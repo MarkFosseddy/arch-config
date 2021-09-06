@@ -6,17 +6,13 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
 Plug 'itchyny/lightline.vim'
-Plug 'cocopon/iceberg.vim'
 call plug#end()
 
 lua require('telescope').setup { defaults = { file_ignore_patterns = {"node_modules"} } }
 
-set completeopt=menuone,noinsert,noselect
-set shortmess+=c
-
 set termguicolors
 colorscheme monochrome
-let g:lightline = {'colorscheme': 'iceberg'}
+"let g:lightline = {'colorscheme': 'monochrome'}
 
 set softtabstop=4
 set tabstop=4

@@ -171,14 +171,12 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: false
 
-# Colors (Iceberg Dark)
 colors:
-  # Default colors
   primary:
     background: '#161821'
     foreground: '#d2d4de'
 
-  # Normal colors
+  # Normal
   normal:
     black:   '#161821'
     red:     '#e27878'
@@ -189,7 +187,7 @@ colors:
     cyan:    '#89b8c2'
     white:   '#c6c8d1'
 
-  # Bright colors
+  # Bright
   bright:
     black:   '#6b7089'
     red:     '#e98989'
