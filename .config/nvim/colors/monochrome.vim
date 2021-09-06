@@ -1,6 +1,7 @@
 "
 " TODO:
-"   - Vue syntax
+"   - Markdown syntax
+"   - Lightline
 "   - Theming
 "   - Snippets
 "
@@ -225,6 +226,17 @@ call s:hi("sassMediaOperators", s:keyword)
 let html_no_rendering = 1
 call s:hi("htmlSpecialTagName", s:keyword)
 call s:hi("javaScript", s:fg)
+
+" --- Pug ---------------------------------------------------------------------
+call s:hi("pugScriptConditional", s:keyword)
+call s:hi("pugScriptLoopKeywords", s:keyword)
+call s:hi("pugScriptStatement", s:keyword)
+call s:hi("pugIdChar", s:string)
+call s:hi("pugClassChar", s:string)
+call s:hi("pugPipeChar", s:fg)
+call s:hi("pugId", s:string)
+call s:hi("pugClass", s:string)
+call s:hi("pugDocType", s:lbg)
 
 " --- JSON --------------------------------------------------------------------
 call s:hi("jsonBraces", s:fg)

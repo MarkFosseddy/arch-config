@@ -6,6 +6,8 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
 Plug 'itchyny/lightline.vim'
+
+Plug 'digitaltoad/vim-pug'
 call plug#end()
 
 lua require('telescope').setup { defaults = { file_ignore_patterns = {"node_modules"} } }
