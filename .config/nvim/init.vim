@@ -9,35 +9,38 @@ Plug 'itchyny/lightline.vim'
 
 Plug 'digitaltoad/vim-pug'
 
-Plug 'L3MON4D3/LuaSnip'
+Plug 'L3MON4D3/luasnip'
 call plug#end()
 
-lua require("luasnip").config.set_config({
-\   updateevents = "TextChangedI"
+lua require('luasnip').config.set_config({
+\   history = false,
+\   updateevents = 'TextChangedI'
 \ })
 
-lua require("luasnip/loaders/from_vscode").load({
+lua require('luasnip/loaders/from_vscode').load({
 \   paths = {'/home/fosseddy/.config/nvim/snippets'}
 \ })
 
 lua require('telescope').setup {
 \   defaults = {
-\       file_ignore_patterns = {"node_modules"}
+\       file_ignore_patterns = {'node_modules'}
 \   }
 \ }
 
 set termguicolors
+let g:monochrome_theme_name = 'yellow_red'
 colorscheme monochrome
-let g:lightline = {'colorscheme': 'monochrome'}
 
-let g:lightline.tabline = {
-\   'left': [[ 'tabs' ]],
-\   'right': [['']]
-\ }
-
-let g:lightline.tab = {
-\   'active': [ 'tabnum', 'filename', 'modified' ],
-\   'inactive': [ 'tabnum', 'filename', 'modified' ]
+let g:lightline = {
+\   'colorscheme': 'monochrome',
+\   'tabline': {
+\       'left': [[ 'tabs' ]],
+\       'right': [['']]
+\   },
+\   'tab': {
+\       'active': [ 'tabnum', 'filename', 'modified' ],
+\       'inactive': [ 'tabnum', 'filename', 'modified' ]
+\   }
 \ }
 
 set softtabstop=4
@@ -68,7 +71,7 @@ set scrolloff=20
 set listchars=trail:·
 set list
 
-let mapleader = " "
+let mapleader = ' '
 
 " Telescope
 nnoremap <leader>ff :lua require('telescope.builtin').find_files()<cr>
@@ -92,11 +95,12 @@ nnoremap <leader>tk :tabnext<cr>
 nnoremap <leader>tl :tablast<cr>
 
 " Popup menu
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <Tab> pumvisible() ? '\<C-n>' : '\<Tab>'
+inoremap <expr> <S-Tab> pumvisible() ? '\<C-p>' : '\<S-Tab>'
 
 " LuaSnip
-imap <silent><expr> <Tab> luasnip#expand_or_jumpable() ? '<Plug>luasnip-expand-or-jump' : '<Tab>'
-inoremap <silent> <S-Tab> <cmd>lua require'luasnip'.jump(-1)<Cr>
+imap <silent><expr> <Tab> luasnip#expand_or_jumpable() ? '<Plug>luasnip-expand-or-jump' : '<Tab>' 
+inoremap <silent> <S-Tab> <cmd>lua require('luasnip').jump(-1)<Cr>
 snoremap <silent> <Tab> <cmd>lua require('luasnip').jump(1)<Cr>
 snoremap <silent> <S-Tab> <cmd>lua require('luasnip').jump(-1)<Cr>
+nnoremap <leader>ss :LuaSnipUnlinkCurrent<cr>

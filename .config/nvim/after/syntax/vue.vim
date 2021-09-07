@@ -12,7 +12,7 @@ endfunction
 
 let s:languages = [
 \   {'name': 'pug',        'tag': 'template', 'attr_pattern': s:attr('lang', '\%(pug\|jade\)')},
-\   {'name': 'typescript', 'tag': 'script', 'attr_pattern': '\%(lang=\("\|''\)[^\1]*\(ts\|typescript\)[^\1]*\1\|ts\)'},
+\   {'name': 'typescript', 'tag': 'script',   'attr_pattern': '\%(lang=\("\|''\)[^\1]*\(ts\|typescript\)[^\1]*\1\|ts\)'},
 \   {'name': 'sass',       'tag': 'style'},
 \   {'name': 'scss',       'tag': 'style'},
 \ ]
