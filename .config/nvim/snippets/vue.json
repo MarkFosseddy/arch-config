@@ -1,0 +1,28 @@
+{
+    "VueTemplate": {
+        "prefix": "vue",
+        "body": [
+            "<script>",
+            "import Vue from \"vue\";",
+            "",
+            "export defautl Vue.extend({",
+            "\tname: \"\",",
+            "",
+            "\tdata() {",
+            "\t\treturn {",
+            "\t\t};",
+            "\t},",
+            "",
+            "\tmethods: {",
+            "\t}",
+            "});",
+            "</script>",
+            "",
+            "<template>",
+            "</template>",
+            "",
+            "<style scoped>",
+            "</style>"
+        ]
+    }
+}

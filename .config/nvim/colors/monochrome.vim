@@ -1,9 +1,20 @@
 "
 " TODO:
-"   - Markdown syntax
-"   - Lightline
 "   - Theming
-"   - Snippets
+"   - Github diff
+"   - Move pug syntax to config
+"
+"   - js, ts snippets
+"   - css, scss snippets?
+"   - html snippets
+"   - vue snippets
+"   - react snippets
+"
+"   - Lua syntax
+"   - VimL syntax
+"   - Go syntax
+"   - Rust syntax
+"   - Python syntax
 "
 
 set background=dark
@@ -86,11 +97,30 @@ function! s:hi(...)
 endfunction
 
 " --- Lightline ---------------------------------------------------------------
-"let s:p = {'normal': {}}
-"let s:p.normal.left = [[s:blue, s:white]]
-"let s:p.normal.right = [[s:blue, s:white]]
-"let s:p.normal.middle = [[s:blue, s:white]]
-"let g:lightline#colorscheme#monochrome#palette = lightline#colorscheme#fill(s:p)
+let s:p = {
+\   'normal': {},
+\   'insert': {},
+\   'command': {},
+\   'visual': {},
+\   'replace': {},
+\   'inactive': {},
+\   'tabline': {}
+\ }
+
+let s:p.normal.left = [[s:bg, s:fg], [s:fg, s:lbg]]
+let s:p.normal.right = [[s:fg, s:lbg], [s:fg, s:lbg]]
+let s:p.normal.middle = [[s:fg, s:dbg]]
+let s:p.insert.left = [[s:bg, s:keyword], [s:fg, s:lbg]]
+let s:p.command.left = [[s:bg, s:keyword], [s:fg, s:lbg]]
+let s:p.visual.left = [[s:bg, s:string], [s:fg, s:lbg]]
+let s:p.replace.left = [[s:bg, s:fg], [s:fg, s:lbg]]
+let s:p.inactive.left = [[s:fg, s:lbg]]
+let s:p.tabline.left = [[s:fg, s:dbg]]
+let s:p.tabline.tabsel = [[s:fg, s:lbg]]
+let s:p.tabline.middle = [[s:fg, s:dbg]]
+
+let g:lightline#colorscheme#monochrome#palette =
+\   lightline#colorscheme#fill(s:p)
 
 " --- Vim Interface -----------------------------------------------------------
 call s:hi("Normal")
@@ -105,6 +135,7 @@ call s:hi("LineNr", s:lbg)
 call s:hi("Directory")
 call s:hi("SignColumn")
 call s:hi("MatchParen", s:keyword, s:lbg)
+call s:hi("Title", s:string)
 call s:hi("Pmenu", s:fg, s:dbg)
 call s:hi("PmenuSel", s:string, s:lbg)
 call s:hi("PmenuSbar", s:none, s:lbg)
@@ -238,25 +269,30 @@ call s:hi("pugId", s:string)
 call s:hi("pugClass", s:string)
 call s:hi("pugDocType", s:lbg)
 
+" --- Go ----------------------------------------------------------------------
+" --- Rust --------------------------------------------------------------------
+" --- Python ------------------------------------------------------------------
+" --- VimL --------------------------------------------------------------------
+
 " --- JSON --------------------------------------------------------------------
 call s:hi("jsonBraces", s:fg)
 call s:hi("jsonKeyword", s:keyword)
 
-" --- VimL --------------------------------------------------------------------
-"call s:hi("vimOption")
-"call s:hi("vimGroup")
-"call s:hi("vimHiClear")
-"call s:hi("vimHiGroup")
-"call s:hi("vimHiAttrib")
-"call s:hi("vimHiGui")
-"call s:hi("vimHiGuiFgBg")
-"call s:hi("vimHiCTerm")
-"call s:hi("vimHiCTermFgBg")
-"call s:hi("vimSynType")
-"hi link vimCommentTitle Comment
+" --- Markdown --- "
+call s:hi("markdownBlockquote", s:keyword)
+call s:hi("markdownRule", s:keyword)
+call s:hi("markdownLinkText", s:keyword)
+call s:hi("markdownItalicDelimiter", s:keyword)
+call s:hi("markdownBoldDelimiter", s:keyword)
 
-" --- Python ------------------------------------------------------------------
-"call s:hi("pythonEscape", s:blue)
+" --- Telescope ---------------------------------------------------------------
+call s:hi("TelescopeMatching", s:bg, s:keyword)
+
+" --- NERDTree ----------------------------------------------------------------
+call s:hi("NERDTreeExecFile", s:string)
+
+" --- Plug --------------------------------------------------------------------
+call s:hi("plugDeleted", s:lbg)
 
 " --- Diffs -------------------------------------------------------------------
 "call s:hi("diffFile", s:cgray)
@@ -266,12 +302,3 @@ call s:hi("jsonKeyword", s:keyword)
 "call s:hi("diffSubname", s:cgray)
 "call s:hi("diffAdded", s:white, s:green)
 "call s:hi("diffRemoved", s:white, s:red)
-
-" --- Markdown ----------------------------------------------------------------
-"call s:hi("Title", s:white, s:default_bg)
-"call s:hi("markdownHeadingDelimiter", s:white, s:default_bg)
-"call s:hi("markdownHeadingRule", s:white, s:default_bg)
-"call s:hi("markdownLinkText", s:blue, s:default_bg)
-
-" --- Telescope ---------------------------------------------------------------
-call s:hi("TelescopeMatching", s:bg, s:keyword)

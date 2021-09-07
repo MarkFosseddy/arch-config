@@ -11,10 +11,10 @@ function! s:should_register(start_pattern)
 endfunction
 
 let s:languages = [
-    \ {'name': 'pug',        'tag': 'template', 'attr_pattern': s:attr('lang', '\%(pug\|jade\)')},
-    \ {'name': 'typescript', 'tag': 'script', 'attr_pattern': '\%(lang=\("\|''\)[^\1]*\(ts\|typescript\)[^\1]*\1\|ts\)'},
-    \ {'name': 'sass',       'tag': 'style'},
-    \ {'name': 'scss',       'tag': 'style'},
+\   {'name': 'pug',        'tag': 'template', 'attr_pattern': s:attr('lang', '\%(pug\|jade\)')},
+\   {'name': 'typescript', 'tag': 'script', 'attr_pattern': '\%(lang=\("\|''\)[^\1]*\(ts\|typescript\)[^\1]*\1\|ts\)'},
+\   {'name': 'sass',       'tag': 'style'},
+\   {'name': 'scss',       'tag': 'style'},
 \ ]
 
 for s:language in s:languages
@@ -25,11 +25,11 @@ for s:language in s:languages
         execute 'syntax include @' . s:language.name . ' syntax/' . s:language.name . '.vim'
         unlet! b:current_syntax
         execute 'syntax region vue_' . s:language.name
-            \ 'keepend'
-            \ 'start=/' . s:start_pattern . '/'
-            \ 'end="</' . s:language.tag . '>"me=s-1'
-            \ 'contains=@' . s:language.name . ',vueSurroundingTag'
-            \ 'fold'
+\           'keepend'
+\           'start=/' . s:start_pattern . '/'
+\           'end="</' . s:language.tag . '>"me=s-1'
+\           'contains=@' . s:language.name . ',vueSurroundingTag'
+\           'fold'
     endif
 endfor
 
