@@ -63,21 +63,9 @@ let s:themes = {
 \   }
 \ }
 
+" Theme
 let s:theme = s:themes.yellow_red
 execute 'set background='.s:theme.background
-
-if exists("g:monochrome_theme_name")
-    let s:t = s:themes[monochrome_theme_name]
-
-    let s:theme.fg = s:t.fg
-    let s:theme.bg = s:t.bg
-    let s:theme.lbg = s:t.lbg
-    let s:theme.dbg = s:t.dbg
-    let s:theme.string = s:t.string
-    let s:theme.keyword = s:t.keyword
-
-    execute 'set background='.s:t.background
-endif
 
 " Colors
 let s:red = '#e27878'

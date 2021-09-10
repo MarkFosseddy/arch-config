@@ -12,6 +12,21 @@ Plug 'digitaltoad/vim-pug'
 Plug 'L3MON4D3/luasnip'
 call plug#end()
 
+set termguicolors
+colorscheme monochrome
+
+let g:lightline = {
+\   'colorscheme': 'monochrome',
+\   'tabline': {
+\       'left': [[ 'tabs' ]],
+\       'right': [['']]
+\   },
+\   'tab': {
+\       'active': [ 'tabnum', 'filename', 'modified' ],
+\       'inactive': [ 'tabnum', 'filename', 'modified' ]
+\   }
+\ }
+
 lua require('luasnip').config.set_config({
 \   history = false,
 \   updateevents = 'TextChangedI'
@@ -24,22 +39,6 @@ lua require('luasnip/loaders/from_vscode').load({
 lua require('telescope').setup {
 \   defaults = {
 \       file_ignore_patterns = {'node_modules'}
-\   }
-\ }
-
-set termguicolors
-let g:monochrome_theme_name = 'yellow_red'
-colorscheme monochrome
-
-let g:lightline = {
-\   'colorscheme': 'monochrome',
-\   'tabline': {
-\       'left': [[ 'tabs' ]],
-\       'right': [['']]
-\   },
-\   'tab': {
-\       'active': [ 'tabnum', 'filename', 'modified' ],
-\       'inactive': [ 'tabnum', 'filename', 'modified' ]
 \   }
 \ }
 
