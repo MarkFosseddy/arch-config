@@ -1,21 +1,3 @@
-"
-" TODO:
-"   - Github diff
-"   - Move pug syntax to config
-"
-"   - js, ts snippets
-"   - css, scss snippets?
-"   - html snippets
-"   - vue snippets
-"   - react snippets
-"
-"   - Lua syntax
-"   - VimL syntax
-"   - Go syntax
-"   - Rust syntax
-"   - Python syntax
-"
-
 hi clear
 if exists("syntax_on")
    syntax reset
@@ -140,17 +122,14 @@ call s:hi("PmenuThumb", s:none, s:theme.string)
 
 " --- Programming languages ---------------------------------------------------
 call s:hi("Comment", s:theme.lbg)
-
 call s:hi("Constant", s:theme.fg)
 call s:hi("String", s:theme.string)
 call s:hi("Character", s:theme.fg)
 call s:hi("Number", s:theme.fg)
 call s:hi("Boolean", s:theme.fg)
 call s:hi("Float", s:theme.fg)
-
 call s:hi("Identifier", s:theme.fg)
 call s:hi("Function", s:theme.fg)
-
 call s:hi("Statement", s:theme.keyword)
 call s:hi("Conditional", s:theme.keyword)
 call s:hi("Repeat", s:theme.keyword)
@@ -158,26 +137,17 @@ call s:hi("Label", s:theme.fg)
 call s:hi("Operator", s:theme.fg)
 call s:hi("Keyword", s:theme.fg)
 call s:hi("Exception", s:theme.fg)
-
 call s:hi("PreProc", s:theme.fg)
 call s:hi("Include", s:theme.keyword)
 call s:hi("Define", s:theme.keyword)
 call s:hi("Macro", s:theme.keyword)
 call s:hi("PreCondit", s:theme.keyword)
-
 call s:hi("Type", s:theme.fg)
 call s:hi("StorageClass", s:theme.keyword)
 call s:hi("Structure", s:theme.fg)
 call s:hi("Typedef", s:theme.keyword)
-
 call s:hi("Special", s:theme.keyword)
 call s:hi("SpecialComment", s:theme.keyword)
-"TODO
-"call s:hi("SpecialChar", s:cyan)
-"call s:hi("Tag", s:cyan)
-"call s:hi("Delimiter", s:cyan)
-"call s:hi("Debug", s:cyan)
-
 call s:hi("Todo", s:theme.lbg)
 
 " --- TypeScript --------------------------------------------------------------
@@ -266,6 +236,29 @@ call s:hi("pugId", s:theme.string)
 call s:hi("pugClass", s:theme.string)
 call s:hi("pugDocType", s:theme.lbg)
 
+" --- C -----------------------------------------------------------------------
+call s:hi("cLabel", s:theme.keyword)
+call s:hi("cUserLabel", s:theme.keyword)
+call s:hi("cCharacter", s:theme.string)
+call s:hi("cStructure", s:theme.keyword)
+call s:hi("cTypedef", s:theme.keyword)
+call s:hi("cType", s:theme.keyword)
+
+" --- Dart --------------------------------------------------------------------
+call s:hi("dartUserLabelRef", s:theme.keyword)
+call s:hi("dartLabel", s:theme.keyword)
+call s:hi("dartExceptions", s:theme.keyword)
+call s:hi("dartAssert", s:theme.keyword)
+call s:hi("dartStorageClass", s:theme.keyword)
+call s:hi("dartOperator", s:theme.keyword)
+call s:hi("dartCombinator", s:theme.keyword)
+call s:hi("dartKeyword", s:theme.keyword)
+call s:hi("dartSpecialChar", s:theme.keyword)
+call s:hi("dartMetadata", s:theme.string)
+call s:hi("dartTypedef", s:theme.keyword)
+call s:hi("dartCoreType", s:theme.keyword)
+call s:hi("dartDocLink", s:theme.string)
+
 " --- Go ----------------------------------------------------------------------
 " TODO
 
@@ -297,12 +290,3 @@ call s:hi("NERDTreeExecFile", s:theme.string)
 
 " --- Plug --------------------------------------------------------------------
 call s:hi("plugDeleted", s:theme.lbg)
-
-" --- Diffs -------------------------------------------------------------------
-"call s:hi("diffFile", s:cgray)
-"call s:hi("diffNewFile", s:cgray)
-"call s:hi("diffIndexLine", s:cgray)
-"call s:hi("diffLine", s:cgray)
-"call s:hi("diffSubname", s:cgray)
-"call s:hi("diffAdded", s:white, s:green)
-"call s:hi("diffRemoved", s:white, s:red)

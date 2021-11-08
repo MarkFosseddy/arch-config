@@ -99,10 +99,11 @@ layouts = [
 ]
 
 widget_defaults = dict(
-    font='CascadiaMono',
+    font="CascadiaMono",
     fontsize=13,
     padding=3,
 )
+
 extension_defaults = widget_defaults.copy()
 
 screens = [
@@ -115,7 +116,7 @@ screens = [
 
                 widget.Spacer(),
 
-                widget.Clock(format='%a %d %b %H:%M'),
+                widget.Clock(format="%a %d %b %H:%M"),
 
                 widget.Spacer(),
 
@@ -124,7 +125,11 @@ screens = [
                 widget.Sep(padding=theme["margin"]),
 
                 widget.TextBox(text="RAM:"),
-                widget.Memory(format="{MemUsed:.0f}M"),
+                widget.Memory(format="{MemUsed:.0f}{mm}"),
+                widget.Sep(padding=theme["margin"]),
+
+                widget.TextBox(text="Disk:"),
+                widget.DF(visible_on_warn=False, format="{uf}{m}"),
                 widget.Sep(padding=theme["margin"]),
 
                 widget.TextBox(text="Volume:"),
@@ -160,12 +165,12 @@ cursor_warp = False
 floating_layout = layout.Floating(float_rules=[
     # Run the utility of `xprop` to see the wm class and name of an X client.
     *layout.Floating.default_float_rules,
-    Match(wm_class='confirmreset'),  # gitk
-    Match(wm_class='makebranch'),  # gitk
-    Match(wm_class='maketag'),  # gitk
-    Match(wm_class='ssh-askpass'),  # ssh-askpass
-    Match(title='branchdialog'),  # gitk
-    Match(title='pinentry'),  # GPG key password entry
+    Match(wm_class="confirmreset"),  # gitk
+    Match(wm_class="makebranch"),  # gitk
+    Match(wm_class="maketag"),  # gitk
+    Match(wm_class="ssh-askpass"),  # ssh-askpass
+    Match(title="branchdialog"),  # gitk
+    Match(title="pinentry"),  # GPG key password entry
 ])
 auto_fullscreen = True
 focus_on_window_activation = "smart"
