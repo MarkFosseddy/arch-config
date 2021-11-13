@@ -30,8 +30,8 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-xinput set-prop 'ELAN2602:00 04F3:3109 Touchpad' 316 1
-xinput set-prop 'ELAN2602:00 04F3:3109 Touchpad' 296 1
+xinput set-prop 'ELAN2602:00 04F3:3109 Touchpad' 'libinput Tapping Enabled' 1
+xinput set-prop 'ELAN2602:00 04F3:3109 Touchpad' 'libinput Natural Scrolling Enabled' 1
 
 setxkbmap -option caps:escape
 xset r rate 200 30
