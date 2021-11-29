@@ -119,6 +119,10 @@ call s:hi("Pmenu", s:theme.fg, s:theme.dbg)
 call s:hi("PmenuSel", s:theme.string, s:theme.lbg)
 call s:hi("PmenuSbar", s:none, s:theme.lbg)
 call s:hi("PmenuThumb", s:none, s:theme.string)
+"call s:hi("NonText", "#262939")
+"call s:hi("Whitespace", "#262939")
+"call s:hi("NonText", "#1e212d")
+"call s:hi("Whitespace", "#1e212d")
 
 " --- Programming languages ---------------------------------------------------
 call s:hi("Comment", s:theme.lbg)
@@ -260,7 +264,10 @@ call s:hi("dartCoreType", s:theme.keyword)
 call s:hi("dartDocLink", s:theme.string)
 
 " --- Go ----------------------------------------------------------------------
-" TODO
+call s:hi("goDeclaration", s:theme.keyword)
+call s:hi("goDeclType", s:theme.keyword)
+call s:hi("goLabel", s:theme.keyword)
+call s:hi("goCharacter", s:theme.string)
 
 " --- Rust --------------------------------------------------------------------
 " TODO
