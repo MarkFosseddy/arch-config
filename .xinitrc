@@ -33,6 +33,9 @@ fi
 xinput set-prop 'ELAN2602:00 04F3:3109 Touchpad' 'libinput Tapping Enabled' 1
 xinput set-prop 'ELAN2602:00 04F3:3109 Touchpad' 'libinput Natural Scrolling Enabled' 1
 
+xinput set-prop 'Logitech USB Optical Mouse' 'libinput Natural Scrolling Enabled' 1
+xinput set-prop 'Logitech USB Optical Mouse' 'libinput Accel Speed' -0.4
+
 setxkbmap -option caps:escape
 xset r rate 200 30
 
