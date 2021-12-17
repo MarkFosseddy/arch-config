@@ -3,5 +3,3 @@
 export PATH=$PATH:$HOME/bin
 export PATH=$PATH:$HOME/go/bin
 export PATH=$PATH:$HOME/.npm-global/bin
-
-export DOTNET_CLI_TELEMETRY_OPTOUT=1
