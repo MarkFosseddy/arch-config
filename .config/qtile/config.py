@@ -7,7 +7,7 @@ from libqtile.utils import guess_terminal
 
 mod = "mod4"
 terminal = "alacritty"
-browser = "chromium"
+browser = "brave"
 
 keys = [
     # Switch between windows
