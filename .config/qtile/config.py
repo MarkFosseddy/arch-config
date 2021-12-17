@@ -99,9 +99,9 @@ layouts = [
 ]
 
 widget_defaults = dict(
-    font="CascadiaMono",
-    fontsize=13,
-    padding=3,
+    font="CodeNewRoman",
+    fontsize=14,
+    padding=4,
 )
 
 extension_defaults = widget_defaults.copy()
