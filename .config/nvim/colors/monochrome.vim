@@ -266,6 +266,8 @@ call s:hi("dartDocLink", s:theme.string)
 " --- Go ----------------------------------------------------------------------
 call s:hi("goDeclaration", s:theme.keyword)
 call s:hi("goDeclType", s:theme.keyword)
+call s:hi("goVar", s:theme.keyword)
+call s:hi("goConst", s:theme.keyword)
 call s:hi("goLabel", s:theme.keyword)
 call s:hi("goCharacter", s:theme.string)
 
