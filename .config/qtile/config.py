@@ -89,6 +89,7 @@ theme = dict(
     margin=8,
     border_focus="#84a0c6",
     border_normal="#161821",
+    border_width=2,
 )
 
 layouts = [
@@ -105,6 +106,17 @@ widget_defaults = dict(
 )
 
 extension_defaults = widget_defaults.copy()
+
+floating_layout = layout.Floating(float_rules=[
+    # Run the utility of `xprop` to see the wm class and name of an X client.
+    *layout.Floating.default_float_rules,
+    Match(wm_class="confirmreset"),  # gitk
+    Match(wm_class="makebranch"),  # gitk
+    Match(wm_class="maketag"),  # gitk
+    Match(wm_class="ssh-askpass"),  # ssh-askpass
+    Match(title="branchdialog"),  # gitk
+    Match(title="pinentry"),  # GPG key password entry
+], **theme)
 
 screens = [
     Screen(
@@ -162,16 +174,6 @@ main = None  # WARNING: this is deprecated and will be removed soon
 follow_mouse_focus = True
 bring_front_click = False
 cursor_warp = False
-floating_layout = layout.Floating(float_rules=[
-    # Run the utility of `xprop` to see the wm class and name of an X client.
-    *layout.Floating.default_float_rules,
-    Match(wm_class="confirmreset"),  # gitk
-    Match(wm_class="makebranch"),  # gitk
-    Match(wm_class="maketag"),  # gitk
-    Match(wm_class="ssh-askpass"),  # ssh-askpass
-    Match(title="branchdialog"),  # gitk
-    Match(title="pinentry"),  # GPG key password entry
-])
 auto_fullscreen = True
 focus_on_window_activation = "smart"
 
