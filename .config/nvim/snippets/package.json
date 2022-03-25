@@ -14,7 +14,7 @@
                 "path": "./vue.json"
             },
             {
-                "language": ["html", "vue"],
+                "language": ["html", "vue", "php", "twig"],
                 "path": "./html.json"
             }
         ]

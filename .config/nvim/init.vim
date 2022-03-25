@@ -67,8 +67,11 @@ set signcolumn=yes
 set colorcolumn=80
 set scrolloff=20
 
-set listchars=trail:·
+set listchars=trail:·,tab:▸\ 
 set list
+
+set splitbelow
+set splitright
 
 let mapleader = ' '
 
