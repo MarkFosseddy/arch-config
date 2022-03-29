@@ -86,7 +86,7 @@ for i in groups:
     ])
 
 theme = dict(
-    margin=8,
+    margin=5,
     border_focus="#84a0c6",
     border_normal="#161821",
     border_width=2,

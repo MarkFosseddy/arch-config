@@ -49,7 +49,6 @@ set smartindent
 set expandtab
 
 set number
-set nu
 set relativenumber
 set noshowmode
 
