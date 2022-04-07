@@ -42,11 +42,18 @@ lua require('telescope').setup {
 \   }
 \ }
 
-set softtabstop=4
+" use tabs
 set tabstop=4
 set shiftwidth=4
+set noexpandtab
+
+" use spaces
+"set tabstop=8
+"set softtabstop=4
+"set shiftwidth=4
+"set expandtab
+
 set smartindent
-set expandtab
 
 set number
 set relativenumber
@@ -66,8 +73,9 @@ set signcolumn=yes
 set colorcolumn=80
 set scrolloff=20
 
-set listchars=trail:·,tab:▸\ 
 set list
+set listchars=trail:·,tab:\ \ 
+"set listchars=space:·,tab:·\ 
 
 set splitbelow
 set splitright
