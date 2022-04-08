@@ -13,41 +13,12 @@ let s:themes = {
 \       "lbg"       : "#454b68",
 \       "dbg"       : "#0e0f15",
 \       "string"    : "#d2a494",
-\       "keyword"   : "#f7d492",
-\       "background": "dark"
-\   },
-\   "reddish_gray": {
-\       "fg"        : "#e8e1d7",
-\       "bg"        : "#161821",
-\       "lbg"       : "#454b68",
-\       "dbg"       : "#0e0f15",
-\       "string"    : "#c1b6b4",
-\       "keyword"   : "#928688",
-\       "background": "dark"
-\    },
-\   "white_blue": {
-\       "fg"        : "LightGray",
-\       "bg"        : "#161821",
-\       "lbg"       : "#454b68",
-\       "dbg"       : "#0e0f15",
-\       "string"    : "#778899",
-\       "keyword"   : "White",
-\       "background": "dark"
-\   },
-\   "red_orange": {
-\       "fg"        : "#241007",
-\       "bg"        : "#ecdac6",
-\       "lbg"       : "#d3aa7c",
-\       "dbg"       : "#e7d0b7",
-\       "string"    : "#ba7742",
-\       "keyword"   : "#673403",
-\       "background": "light"
+\       "keyword"   : "#f7d492"
 \   }
 \ }
 
 " Theme
 let s:theme = s:themes.yellow_red
-execute 'set background='.s:theme.background
 
 " Colors
 let s:red = '#e27878'
@@ -59,7 +30,7 @@ let s:black = '#161821'
 let s:yellow = '#e2a478'
 let s:magenta = '#a093c7'
 
-" Attribute
+" Attributes
 let s:none = "NONE"
 let s:bold = "bold"
 let s:italic = "italic"
@@ -120,10 +91,6 @@ call s:hi("PmenuSel", s:theme.string, s:theme.lbg)
 call s:hi("PmenuSbar", s:none, s:theme.lbg)
 call s:hi("PmenuThumb", s:none, s:theme.string)
 call s:hi("VertSplit", s:theme.bg, s:theme.lbg)
-"call s:hi("NonText", "#262939")
-"call s:hi("Whitespace", "#262939")
-"call s:hi("NonText", "#1e212d")
-"call s:hi("Whitespace", "#1e212d")
 
 " --- Programming languages ---------------------------------------------------
 call s:hi("Comment", s:theme.lbg)
