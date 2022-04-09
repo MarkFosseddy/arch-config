@@ -8,12 +8,12 @@ let g:colors_name = "monochrome"
 " Themes
 let s:themes = {
 \   "yellow_red": {
-\       "fg"        : "#d6cbc5",
-\       "bg"        : "#161821",
-\       "lbg"       : "#454b68",
-\       "dbg"       : "#0e0f15",
-\       "string"    : "#d2a494",
-\       "keyword"   : "#f7d492"
+\       "fg":      "#d6cbc5",
+\       "bg":      "#161821",
+\       "lbg":     "#454b68",
+\       "dbg":     "#0e0f15",
+\       "string":  "#d2a494",
+\       "keyword": "#f7d492"
 \   }
 \ }
 
