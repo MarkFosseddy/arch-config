@@ -81,7 +81,7 @@ set splitbelow
 set splitright
 
 set guicursor=a:block-blinkwait700-blinkoff400-blinkon250-Cursor,
-	\i-c:CursorI,r:CursorR
+	\i:CursorI,r:CursorR
 
 let mapleader = ' '
 
