@@ -80,6 +80,9 @@ set listchars=trail:·,tab:\ \
 set splitbelow
 set splitright
 
+set guicursor=a:block-blinkwait700-blinkoff400-blinkon250-Cursor,
+	\i-c:CursorI,r:CursorR
+
 let mapleader = ' '
 
 " Telescope
@@ -113,3 +116,6 @@ inoremap <silent> <S-Tab> <cmd>lua require('luasnip').jump(-1)<Cr>
 snoremap <silent> <Tab> <cmd>lua require('luasnip').jump(1)<Cr>
 snoremap <silent> <S-Tab> <cmd>lua require('luasnip').jump(-1)<Cr>
 nnoremap <leader>ss :LuaSnipUnlinkCurrent<cr>
+
+
+autocmd VimLeave * set guicursor=a:block
