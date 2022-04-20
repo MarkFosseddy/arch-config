@@ -4,8 +4,6 @@
         "body": [
             "<script>",
             "export default {",
-            "\tname: \"\",",
-            "",
             "\tdata() {",
             "\t\treturn {",
             "\t\t};",

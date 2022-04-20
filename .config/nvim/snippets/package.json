@@ -6,8 +6,8 @@
     "contributes": {
         "snippets": [
             {
-                "language": "typescript",
-                "path": "./typescript.json"
+                "language": ["typescript", "javascript"],
+                "path": "./javascript.json"
             },
             {
                 "language": "vue",
@@ -16,6 +16,10 @@
             {
                 "language": ["html", "vue", "php", "twig"],
                 "path": "./html.json"
+            },
+            {
+                "language": "all",
+                "path": "./globals.json"
             }
         ]
     }

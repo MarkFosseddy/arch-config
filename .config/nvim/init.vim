@@ -42,16 +42,10 @@ lua require('telescope').setup {
 \   }
 \ }
 
-" use tabs
-set tabstop=4
-set shiftwidth=4
-set noexpandtab
-
-" use spaces
-"set tabstop=8
-"set softtabstop=4
-"set shiftwidth=4
-"set expandtab
+set tabstop=2
+set shiftwidth=2
+set expandtab
+"set noexpandtab
 
 set smartindent
 
@@ -74,14 +68,13 @@ set colorcolumn=80
 set scrolloff=20
 
 set list
-set listchars=trail:·,tab:\ \ 
-"set listchars=space:·,tab:·\ 
+set listchars=trail:·,tab:·\ 
 
 set splitbelow
 set splitright
 
 set guicursor=a:block-blinkwait700-blinkoff400-blinkon250-Cursor,
-	\i:CursorI,r:CursorR
+  \i:CursorI,r:CursorR
 
 let mapleader = ' '
 
@@ -91,7 +84,7 @@ nnoremap <leader>fb :lua require('telescope.builtin').buffers()<cr>
 nnoremap <leader>fg :lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>fs :lua require('telescope.builtin').grep_string()<cr>
 
-" Tabs
+" Vim tabs
 nnoremap <leader>t1 1gt
 nnoremap <leader>t2 2gt
 nnoremap <leader>t3 3gt
@@ -116,6 +109,5 @@ inoremap <silent> <S-Tab> <cmd>lua require('luasnip').jump(-1)<Cr>
 snoremap <silent> <Tab> <cmd>lua require('luasnip').jump(1)<Cr>
 snoremap <silent> <S-Tab> <cmd>lua require('luasnip').jump(-1)<Cr>
 nnoremap <leader>ss :LuaSnipUnlinkCurrent<cr>
-
 
 autocmd VimLeave * set guicursor=a:block
