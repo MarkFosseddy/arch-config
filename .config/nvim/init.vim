@@ -60,7 +60,6 @@ set incsearch
 
 set noerrorbells
 
-set nowrap
 set hidden
 
 set signcolumn=yes
