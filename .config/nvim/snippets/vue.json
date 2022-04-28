@@ -1,27 +1,27 @@
 {
-    "VueTemplate": {
-        "prefix": "vue",
-        "body": [
-            "<script>",
-            "export default {",
-            "\tdata() {",
-            "\t\treturn {",
-            "\t\t};",
-            "\t},",
-            "",
-            "\tcomputed: {",
-            "\t},",
-            "",
-            "\tmethods: {",
-            "\t}",
-            "};",
-            "</script>",
-            "",
-            "<template>",
-            "</template>",
-            "",
-            "<style scoped>",
-            "</style>"
-        ]
-    }
+  "VueTemplate": {
+    "prefix": "vue",
+    "body": [
+      "<script>",
+      "export default {",
+      "\tdata() {",
+      "\t\treturn {",
+      "\t\t};",
+      "\t},",
+      "",
+      "\tcomputed: {",
+      "\t},",
+      "",
+      "\tmethods: {",
+      "\t}",
+      "};",
+      "</script>",
+      "",
+      "<template>",
+      "</template>",
+      "",
+      "<style scoped>",
+      "</style>"
+    ]
+  }
 }

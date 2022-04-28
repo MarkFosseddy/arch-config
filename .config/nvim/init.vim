@@ -45,7 +45,6 @@ lua require('telescope').setup {
 set tabstop=2
 set shiftwidth=2
 set expandtab
-"set noexpandtab
 
 set smartindent
 

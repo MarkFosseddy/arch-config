@@ -1,26 +1,26 @@
 {
-    "name": "snippets",
-    "engines": {
-        "vscode": "^1.11.0"
-    },
-    "contributes": {
-        "snippets": [
-            {
-                "language": ["typescript", "javascript"],
-                "path": "./javascript.json"
-            },
-            {
-                "language": "vue",
-                "path": "./vue.json"
-            },
-            {
-                "language": ["html", "vue", "php", "twig"],
-                "path": "./html.json"
-            },
-            {
-                "language": "all",
-                "path": "./globals.json"
-            }
-        ]
-    }
+  "name": "snippets",
+  "engines": {
+    "vscode": "^1.11.0"
+  },
+  "contributes": {
+    "snippets": [
+      {
+        "language": ["typescript", "javascript"],
+        "path": "./javascript.json"
+      },
+      {
+        "language": "vue",
+        "path": "./vue.json"
+      },
+      {
+        "language": ["html", "vue", "php", "twig"],
+        "path": "./html.json"
+      },
+      {
+        "language": "all",
+        "path": "./globals.json"
+      }
+    ]
+  }
 }

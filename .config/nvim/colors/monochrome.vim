@@ -7,14 +7,14 @@ let g:colors_name = "monochrome"
 
 " Themes
 let s:themes = {
-\   "yellow_red": {
-\       "fg":      "#d6cbc5",
-\       "bg":      "#161821",
-\       "lbg":     "#454b68",
-\       "dbg":     "#0e0f15",
-\       "string":  "#d2a494",
-\       "keyword": "#f7d492"
-\   }
+\  "yellow_red": {
+\    "fg":      "#d6cbc5",
+\    "bg":      "#161821",
+\    "lbg":     "#454b68",
+\    "dbg":     "#0e0f15",
+\    "string":  "#d2a494",
+\    "keyword": "#f7d492"
+\  }
 \ }
 
 " Theme
@@ -37,24 +37,24 @@ let s:italic = "italic"
 let s:underline = "underline"
 
 function! s:hi(...)
-    let group = a:1
-    let fg = get(a:, 2, s:theme.fg)
-    let bg = get(a:, 3, s:theme.bg)
-    let attr = get(a:, 4, s:none)
+  let group = a:1
+  let fg = get(a:, 2, s:theme.fg)
+  let bg = get(a:, 3, s:theme.bg)
+  let attr = get(a:, 4, s:none)
 
-    let cmd = ["hi", group]
+  let cmd = ["hi", group]
 
-    if fg != s:none
-        call add(cmd, "guifg=".fg)
-    endif
+  if fg != s:none
+    call add(cmd, "guifg=".fg)
+  endif
 
-    if bg != s:none
-        call add(cmd, "guibg=".bg)
-    endif
+  if bg != s:none
+    call add(cmd, "guibg=".bg)
+  endif
 
-    call add(cmd, "gui=".attr)
+  call add(cmd, "gui=".attr)
 
-    exec join(cmd, " ")
+  exec join(cmd, " ")
 endfunction
 
 " --- Lightline ---------------------------------------------------------------
@@ -255,7 +255,7 @@ call s:hi("goCharacter", s:theme.string)
 call s:hi("jsonBraces", s:theme.fg)
 call s:hi("jsonKeyword", s:theme.keyword)
 
-" --- Markdown --- "
+" --- Markdown ----------------------------------------------------------------
 call s:hi("markdownBlockquote", s:theme.keyword)
 call s:hi("markdownRule", s:theme.keyword)
 call s:hi("markdownLinkText", s:theme.keyword)

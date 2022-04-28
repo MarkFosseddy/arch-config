@@ -1,11 +1,11 @@
 {
-	"todo": {
-        "prefix": "todo",
-        "body": "@TODO(art): $0"
-	},
+  "todo": {
+    "prefix": "todo",
+    "body": "@TODO(art): $0"
+  },
 
-	"note": {
-        "prefix": "note",
-        "body": "@NOTE(art): $0"
-	}
+  "note": {
+    "prefix": "note",
+    "body": "@NOTE(art): $0"
+  }
 }
